@@ -1,18 +1,8 @@
-import { AppBar, Button, Toolbar } from "@mui/material";
+import Header from "./Components/Header";
+import Layout from "./layout/Layout";
 
 const App = () => {
-  return (
-    <>
-      <AppBar position="sticky">
-        <Toolbar></Toolbar>
-      </AppBar>
-      <Button variant="contained">ارین</Button>
-      <Button variant="contained">ارین</Button>
-      <Button variant="contained">ارین</Button>
-      <Button variant="contained">ارین</Button>
-      <Button variant="contained">ارین</Button>
-    </>
-  );
+  return <Layout></Layout>;
 };
 
 export default App;
