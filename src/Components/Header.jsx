@@ -18,7 +18,7 @@ const Header = () => {
             px={5}
           >
             <Grid xs={6}>
-              <Typography component="h6" variant="h5">
+              <Typography component="h6" variant="h5" color="white">
                 وبلاگ من
               </Typography>
             </Grid>
