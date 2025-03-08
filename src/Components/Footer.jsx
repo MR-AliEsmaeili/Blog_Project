@@ -6,7 +6,7 @@ const Footer = () => {
       <Typography
         component="p"
         variant="6"
-        bgcolor="#44A9C0"
+        bgcolor="#C5BAFF"
         color="text"
         padding="10px"
         textAlign="center"
