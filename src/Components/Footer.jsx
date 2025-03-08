@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Typography } from "@mui/material"
 
 const Footer = () => {
   return (
@@ -6,18 +6,19 @@ const Footer = () => {
       <Typography
         component="p"
         variant="6"
-        bgcolor="#C5BAFF"
+        bgcolor="#9280f7"
         color="text"
         padding="10px"
         textAlign="center"
         mt={10}
         p={3}
         sx={{ textAlign: "center", cursor: "pointer" }}
+        fontWeight={600}
       >
         طراحی شده با عشق 🤍 | توسط علی اسماعیلی
       </Typography>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material";
+import { createTheme } from "@mui/material"
 
 const theme = createTheme({
   typography: {
@@ -13,9 +13,9 @@ const theme = createTheme({
   direction: "rtl",
   palette: {
     mode: "light",
-    primary: {  main: "#C5BAFF" },
-    secondary:{ main:"#FDDBBB"},
+    primary: { main: "#9280f7" },
+    secondary: { main: "#FDDBBB" },
   },
-});
+})
 
-export default theme;
+export default theme

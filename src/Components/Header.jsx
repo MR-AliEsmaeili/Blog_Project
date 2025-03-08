@@ -18,7 +18,7 @@ const Header = () => {
               sx={{ width: "100%" }}
               px={5}
             >
-              <Grid size={{ xs: 6 }}>
+              <Grid>
                 <Typography
                   fontWeight={700}
                   component="h6"
@@ -29,7 +29,7 @@ const Header = () => {
                 </Typography>
               </Grid>
 
-              <Grid size={{ xs: 6 }}>
+              <Grid>
                 <img
                   width="100px"
                   style={{ borderRadius: "25px" }}
