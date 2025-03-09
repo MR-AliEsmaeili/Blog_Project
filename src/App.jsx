@@ -1,11 +1,17 @@
-import Header from "./Components/Header"
+import { Route, Routes } from "react-router-dom"
 import Layout from "./layout/Layout"
 import Home from "./Pages/Home"
+import NotFoundPage from "./Pages/NotFoundPage"
 
 const App = () => {
   return (
     <Layout>
-      <Home />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/blog/:slug" element={<p>blogDeatails</p>} />
+        <Route path="/author/:slug" element={<p>authorDeatails</p>} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
     </Layout>
   )
 }

@@ -7,7 +7,6 @@ const Blog = () => {
   const { loading, data, error } = useQuery(GET_BLOGS_INFO)
   if (loading) return <h5>loading...</h5>
   if (error) return <h5>error...</h5>
-  console.log(data)
   return (
     <Grid2 container spacing={2}>
       {data.posts_list.map((post) => (
