@@ -13,9 +13,6 @@ const GET_BLOGS_INFO = gql`
       }
       slug
       title
-      decreption {
-        text
-      }
       id
     }
   }
@@ -33,13 +30,13 @@ const GET_AUTHORS_INFO = gql`
   }
 `
 const GET_AUTHOR_DETAILS_INFO = gql`
-  query {
-    authors(where: { slug: "String!" }) {
+  query getAuthorInfo($slug: String!) {
+    authors(where: { slug: $slug }) {
       cover {
         url
       }
       description {
-        text
+        html
       }
       name
       posts {
@@ -48,8 +45,11 @@ const GET_AUTHOR_DETAILS_INFO = gql`
         }
         slug
         title
+        id
       }
+      field
     }
   }
 `
+
 export { GET_BLOGS_INFO, GET_AUTHORS_INFO, GET_AUTHOR_DETAILS_INFO }

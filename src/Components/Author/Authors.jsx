@@ -5,7 +5,6 @@ import { Link } from "react-router-dom"
 
 const Authors = () => {
   const { loading, data } = useQuery(GET_AUTHORS_INFO)
-  console.log(data)
   if (loading) return <p>loading...</p>
   if (!data) return <p>data fething error</p>
   return (
@@ -23,7 +22,10 @@ const Authors = () => {
           <div key={index}>
             <Link
               to={`/author/${author.slug}`}
-              style={{ textDecoration: "none", color: "inherit" }}
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+              }}
             >
               <Grid2
                 container
@@ -33,6 +35,8 @@ const Authors = () => {
                   transition: "background-color 0.3s ease",
                   "&:hover": {
                     backgroundColor: "#e1e1e1",
+                    borderRadius: 4,
+                    borderRight: "4px solid #9280F780",
                   },
                 }}
               >

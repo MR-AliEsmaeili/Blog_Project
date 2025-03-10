@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import Layout from "./layout/Layout"
 import Home from "./Pages/Home"
 import NotFoundPage from "./Pages/NotFoundPage"
-import AuthoDetailPage from "./Pages/AuthoDetailPage"
+import AuthorDetailPage from "./Pages/AuthorDetailPage"
 import PostDetailPage from "./Pages/PostDetailPage"
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/blog/:slug" element={<PostDetailPage />} />
-        <Route path="/author/:slug" element={<AuthoDetailPage />} />
+        <Route path="/author/:slug" element={<AuthorDetailPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Layout>

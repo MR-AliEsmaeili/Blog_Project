@@ -1,6 +1,7 @@
 import { AppBar, Box, Container, Toolbar, Typography } from "@mui/material"
 import Grid from "@mui/material/Grid2"
 import icon from "../Assets/icon.jpg"
+import { Link } from "react-router-dom"
 const Header = () => {
   return (
     <Box>
@@ -19,20 +20,22 @@ const Header = () => {
               px={5}
             >
               <Grid>
-                <Typography
-                  fontWeight={700}
-                  component="h6"
-                  variant="h5"
-                  color="text"
-                >
-                  وبلاگ من
-                </Typography>
+                <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+                  <Typography
+                    fontWeight={700}
+                    component="h6"
+                    variant="h5"
+                    color="text"
+                  >
+                    وبلاگ من
+                  </Typography>
+                </Link>
               </Grid>
 
               <Grid>
                 <img
                   width="100px"
-                  style={{ borderRadius: "25px" }}
+                  style={{ borderRadius: 15 }}
                   src={icon}
                   alt="icon"
                 />

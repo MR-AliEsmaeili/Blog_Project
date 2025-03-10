@@ -11,30 +11,37 @@ import {
 } from "@mui/material"
 import { Link } from "react-router-dom"
 
-const CardEl = ({ props: { authors, cover, title, slug } }) => {
+const CardEl = ({ authors, cover, title, slug }) => {
   return (
     <>
       <Card
         sx={{
+          transition: "background-color 0.6s ease",
           border: "1px solid rgba(144, 144, 144, 0.3)",
           boxShadow: "2px 7px 15px -1px rgba(56,56,56,0.3)",
           borderRadius: 4,
+          "&:hover": {
+            boxShadow: "2px 7px 15px -1px rgba(164, 51, 240, 0.3)",
+            cursor: "pointer",
+          },
         }}
       >
-        <CardHeader
-          avatar={<Avatar src={authors.cover.url} />}
-          title={
-            <Typography
-              component="p"
-              variant="p"
-              color="text.primary"
-              fontWeight={700}
-              mr={2}
-            >
-              {authors.name}
-            </Typography>
-          }
-        />
+        {authors && (
+          <CardHeader
+            avatar={<Avatar src={authors.cover.url} />}
+            title={
+              <Typography
+                component="p"
+                variant="p"
+                color="text.primary"
+                fontWeight={700}
+                mr={2}
+              >
+                {authors.name}
+              </Typography>
+            }
+          />
+        )}
         <CardMedia component="img" height="194" image={cover.url} alt={title} />
         <CardContent sx={{ height: 80 }}>
           <Typography
