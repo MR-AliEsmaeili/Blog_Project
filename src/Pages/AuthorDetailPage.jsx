@@ -1,16 +1,15 @@
-import { useQuery } from "@apollo/client"
-import { Avatar, Container, Grid2, Typography } from "@mui/material"
-import { useParams } from "react-router-dom"
-import { GET_AUTHOR_DETAILS_INFO } from "../Graphql/queries"
-import CardEl from "../Components/Shared/CardEl"
+import { useQuery } from "@apollo/client";
+import { Avatar, Container, Grid2, Typography } from "@mui/material";
+import { useParams } from "react-router-dom";
+import { GET_AUTHOR_DETAILS_INFO } from "../Graphql/queries";
+import CardEl from "../Components/Shared/CardEl";
 
 const AuthorDetailPage = () => {
-  const { slug } = useParams()
+  const { slug } = useParams();
   const { loading, data } = useQuery(GET_AUTHOR_DETAILS_INFO, {
     variables: { slug },
-  })
-  if (loading) return <p> loading ...</p>
-  console.log(data)
+  });
+  if (loading) return <p> loading ...</p>;
   return (
     <>
       <Container maxWidth="lg">
@@ -46,11 +45,7 @@ const AuthorDetailPage = () => {
             <Grid2 container my={5} spacing={3}>
               {data.authors.posts.map((post) => (
                 <Grid2 size={{ xs: 12, sm: 6, md: 4 }} key={post.id}>
-                  <CardEl
-                    title={post.title}
-                    slug={post.slug}
-                    cover={post.cover}
-                  />
+                  <CardEl props={post} />
                 </Grid2>
               ))}
             </Grid2>
@@ -58,7 +53,7 @@ const AuthorDetailPage = () => {
         </Grid2>
       </Container>
     </>
-  )
-}
+  );
+};
 
-export default AuthorDetailPage
+export default AuthorDetailPage;

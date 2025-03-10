@@ -8,10 +8,10 @@ import {
   CardMedia,
   Divider,
   Typography,
-} from "@mui/material"
-import { Link } from "react-router-dom"
+} from "@mui/material";
+import { Link } from "react-router-dom";
 
-const CardEl = ({ authors, cover, title, slug }) => {
+const CardEl = ({ props: { authors, cover, title, slug } }) => {
   return (
     <>
       <Card
@@ -77,7 +77,7 @@ const CardEl = ({ authors, cover, title, slug }) => {
         </CardActions>
       </Card>
     </>
-  )
-}
+  );
+};
 
-export default CardEl
+export default CardEl;
