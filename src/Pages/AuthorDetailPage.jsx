@@ -1,15 +1,16 @@
-import { useQuery } from "@apollo/client";
-import { Avatar, Container, Grid2, Typography } from "@mui/material";
-import { useParams } from "react-router-dom";
-import { GET_AUTHOR_DETAILS_INFO } from "../Graphql/queries";
-import CardEl from "../Components/Shared/CardEl";
+import { useQuery } from "@apollo/client"
+import { Avatar, Container, Grid2, Typography } from "@mui/material"
+import { useParams } from "react-router-dom"
+import { GET_AUTHOR_DETAILS_INFO } from "../Graphql/queries"
+import CardEl from "../Components/Shared/CardEl"
+import Loader from "../Components/Shared/Loader"
 
 const AuthorDetailPage = () => {
-  const { slug } = useParams();
+  const { slug } = useParams()
   const { loading, data } = useQuery(GET_AUTHOR_DETAILS_INFO, {
     variables: { slug },
-  });
-  if (loading) return <p> loading ...</p>;
+  })
+  if (loading) return <Loader />
   return (
     <>
       <Container maxWidth="lg">
@@ -53,7 +54,7 @@ const AuthorDetailPage = () => {
         </Grid2>
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default AuthorDetailPage;
+export default AuthorDetailPage
