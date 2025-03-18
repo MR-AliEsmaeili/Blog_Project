@@ -1,16 +1,10 @@
 import Loader from "../Components/Shared/Loader"
 import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 import { useQuery } from "@apollo/client"
-import {
-  Avatar,
-  Box,
-  Container,
-  Divider,
-  Grid2,
-  Typography,
-} from "@mui/material"
+import { Avatar, Box, Container, Grid2, Typography } from "@mui/material"
 import { useNavigate, useParams } from "react-router-dom"
 import { GET_POST_INFO } from "../Graphql/queries"
+import CommentForm from "../Components/CommentForm"
 
 const PostDetailPage = () => {
   const { slug } = useParams()
@@ -81,6 +75,9 @@ const PostDetailPage = () => {
           <div
             dangerouslySetInnerHTML={{ __html: data.posts.decreption.html }}
           ></div>
+        </Grid2>
+        <Grid2 size={{ xs: 12 }} mt={5} mx={8}>
+          <CommentForm />
         </Grid2>
       </Grid2>
     </Container>
