@@ -1,6 +1,7 @@
+import { Email } from "@mui/icons-material"
 import { Button, Grid2, TextField, Typography } from "@mui/material"
 
-const CommentForm = () => {
+const CommentForm = ({ formState, setFormState, slug }) => {
   return (
     <Grid2
       container
@@ -16,10 +17,26 @@ const CommentForm = () => {
         </Typography>
       </Grid2>
       <Grid2 size={{ xs: 12 }} mx={4} my={2}>
-        <TextField variant="outlined" label="نام" sx={{ width: "100%" }} />
+        <TextField
+          variant="outlined"
+          label="نام"
+          sx={{ width: "100%" }}
+          value={formState.name}
+          onChange={(e) =>
+            setFormState({ ...formState, name: event.target.value })
+          }
+        />
       </Grid2>
       <Grid2 size={{ xs: 12 }} mx={4} my={2}>
-        <TextField variant="outlined" label="ایمیل" sx={{ width: "100%" }} />
+        <TextField
+          variant="outlined"
+          label="ایمیل"
+          sx={{ width: "100%" }}
+          value={formState.email}
+          onChange={(e) =>
+            setFormState({ ...formState, email: event.target.value })
+          }
+        />
       </Grid2>
       <Grid2 size={{ xs: 12 }} mx={4} my={2}>
         <TextField
@@ -28,6 +45,8 @@ const CommentForm = () => {
           sx={{ width: "100%" }}
           rows={3}
           multiline
+          value={formState.text}
+          onChange={(e) => setFormState({ ...formState, text: e.target.value })}
         />
       </Grid2>
       <Grid2 size={{ xs: 12 }} mx={4} my={2}>
