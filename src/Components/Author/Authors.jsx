@@ -1,13 +1,13 @@
-import { useQuery } from "@apollo/client"
-import { GET_AUTHORS_INFO } from "../../Graphql/queries"
-import { Avatar, Divider, Grid2, Typography } from "@mui/material"
-import { Link } from "react-router-dom"
-import Loader from "../Shared/Loader"
+import { useQuery } from "@apollo/client";
+import { GET_AUTHORS_INFO } from "../../Graphql/queries";
+import { Avatar, Divider, Grid2, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
+import Loader from "../Shared/Loader";
 
 const Authors = () => {
-  const { loading, data } = useQuery(GET_AUTHORS_INFO)
-  if (loading) return <Loader />
-  if (!data) return <p>data fething error</p>
+  const { loading, data } = useQuery(GET_AUTHORS_INFO);
+  if (loading) return <Loader />;
+  if (!data) return <p>data fething error</p>;
   return (
     <Grid2
       container
@@ -33,7 +33,7 @@ const Authors = () => {
                 alignItems="center"
                 sx={{
                   p: 1,
-                  transition: "background-color 0.4s ease",
+                  transition: "background-color 0.4لs ease",
                   "&:hover": {
                     backgroundColor: "#e1e1e1",
                     borderRadius: 4,
@@ -56,7 +56,7 @@ const Authors = () => {
         ))}
       </Grid2>
     </Grid2>
-  )
-}
+  );
+};
 
-export default Authors
+export default Authors;

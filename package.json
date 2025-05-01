@@ -20,6 +20,7 @@
     "react-dom": "^18.3.1",
     "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^6.28.1",
+    "react-toastify": "^11.0.5",
     "stylis": "^4.3.6",
     "stylis-plugin-rtl": "^2.1.1"
   },

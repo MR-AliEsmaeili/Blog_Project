@@ -13,7 +13,7 @@ const Footer = () => {
         mt={10}
         p={3}
         sx={{ textAlign: "center", cursor: "pointer" }}
-        fontWeight={600}
+        fontWeight={500}
       >
         طراحی شده با عشق 🤍 | توسط علی اسماعیلی
       </Typography>

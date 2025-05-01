@@ -4,8 +4,9 @@ import { useQuery } from "@apollo/client"
 import { Avatar, Box, Container, Grid2, Typography } from "@mui/material"
 import { useNavigate, useParams } from "react-router-dom"
 import { GET_POST_INFO } from "../Graphql/queries"
-import CommentForm from "../Components/CommentForm"
+import CommentForm from "../Components/Comment/CommentForm"
 import { useState } from "react"
+import Comments from "../Components/Comment/Comments"
 
 const PostDetailPage = () => {
   const [formState, setFormState] = useState({})
@@ -14,7 +15,6 @@ const PostDetailPage = () => {
   const { loading, data } = useQuery(GET_POST_INFO, {
     variables: { slug },
   })
-  console.log(formState)
   if (loading) return <Loader />
   // if (error) return <p>error ...</p>
   return (
@@ -84,6 +84,9 @@ const PostDetailPage = () => {
             setFormState={setFormState}
             slug={slug}
           />
+        </Grid2>
+        <Grid2 size={{ xs: 12 }} mt={5} mx={8}>
+          <Comments slug={slug} />
         </Grid2>
       </Grid2>
     </Container>
