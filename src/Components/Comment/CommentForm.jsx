@@ -17,7 +17,6 @@ const CommentForm = ({ formState, setFormState, slug }) => {
   }
   if (data) {
     toast.success("کامنت شما ارسال شد و منتظر تایید میباشد !")
-    setFormState({})
   }
   return (
     <Grid2
